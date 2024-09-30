@@ -2,11 +2,11 @@ function getCookie(cookieName) {
     return localStorage.getItem(cookieName);
 }
 
-function keyCheck() {
+function keyCheck(placeholder) {
     if (!getCookie("nasakey")) {
         console.log("No API key found. Prompting user for input."); // Debug log
         const apikey = prompt(
-            "Please enter your NASA API key to be saved locally:"
+            "Please enter your NASA API key to be saved locally:", placeholder
         );
     
         if (apikey) {
@@ -22,7 +22,7 @@ function keyCheck() {
     }
 }
 
-keyCheck();
+keyCheck('');
 
 // Fetch NASA APOD data
 fetch(`https://api.nasa.gov/planetary/apod?api_key=${getCookie("nasakey")}`)
