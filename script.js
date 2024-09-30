@@ -2,23 +2,27 @@ function getCookie(cookieName) {
     return localStorage.getItem(cookieName);
 }
 
-if (!getCookie("nasakey")) {
-    console.log("No API key found. Prompting user for input."); // Debug log
-    const apikey = prompt(
-        "Please enter your NASA API key to be saved locally:"
-    );
-
-    if (apikey) {
-        localStorage.setItem("nasakey", apikey);
-        console.log("API key saved to localStorage."); // Debug log
+function keyCheck() {
+    if (!getCookie("nasakey")) {
+        console.log("No API key found. Prompting user for input."); // Debug log
+        const apikey = prompt(
+            "Please enter your NASA API key to be saved locally:"
+        );
+    
+        if (apikey) {
+            localStorage.setItem("nasakey", apikey);
+            console.log("API key saved to localStorage."); // Debug log
+        } else {
+            console.log("No API key provided. Skipping data fetching."); // Debug log
+            // Skip the rest of the script since no API key was provided
+            throw new Error("API key is required.");
+        }
     } else {
-        console.log("No API key provided. Skipping data fetching."); // Debug log
-        // Skip the rest of the script since no API key was provided
-        throw new Error("API key is required.");
+        console.log("API key already exists in localStorage."); // Debug log
     }
-} else {
-    console.log("API key already exists in localStorage."); // Debug log
 }
+
+keyCheck();
 
 // Fetch NASA APOD data
 fetch(`https://api.nasa.gov/planetary/apod?api_key=${getCookie("nasakey")}`)

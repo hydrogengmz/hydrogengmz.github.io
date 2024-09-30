@@ -35,3 +35,13 @@ html {
     text-align: center;
     min-height: 50vh;
 }
+
+.settingsButton {
+    border-radius: 5px;
+    font-size: calc(12px + 0.2vw);
+    padding: 15px;
+    background-color: dodgerblue;
+    border: none;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: white;
+}
