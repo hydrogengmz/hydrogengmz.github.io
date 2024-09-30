@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width" />
+        <title>Hydrogen</title>
+        <link href="style.css" rel="stylesheet" type="text/css" />
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    </head>
+
+    <body>
+        <div class="hero">
+            <div style="text-align: center">
+                <h1
+                    class="t"
+                    style="line-height: 0.1vw; font-family: molecules">
+                    Hydrogen
+                </h1>
+                <h1 class="st">your guide to useless facts, lol</h1>
+            </div>
+        </div>
+        <div class="nasa">
+            <h1 class="t">Today at NASA</h1>
+            <div style="text-align: center; padding: 50px">
+                <h1>Image Of The Day</h1>
+                <b>
+                    <p id="nTitle"></p>
+                </b>
+                <img
+                    id="nasaImg"
+                    style="width: 80%; border-radius: 10px"
+                    src=""
+                    alt="" />
+                <p style="text-align: left" id="bgInfoNasa"></p>
+                <hr />
+                <h1>Perseverance - Latest Images</h1>
+                <img
+                    id="nPerseveranceImg"
+                    src=""
+                    alt=""
+                    style="width: 80%; border-radius: 10px" />
+                <p>
+                    Image taken on
+                    <span style="font-weight: 700" id="mEarthDate"></span>
+                    <br />
+                    Image taken by
+                    <span style="font-weight: 700" id="mCameraName"> </span>
+                </p>
+            </div>
+        </div>
+
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+            AOS.init();
+        </script>
+        <script src="script.js"></script>
+    </body>
+</html>
