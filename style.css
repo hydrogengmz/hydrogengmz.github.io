@@ -42,6 +42,15 @@ html {
     padding: 15px;
     background-color: dodgerblue;
     border: none;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+        "Lucida Sans", Arial, sans-serif;
     color: white;
+}
+
+.videoIframe {
+    pointer-events: none;
+    -webkit-user-select: none;
+    user-select: none;
+    border-radius: 10px;
+    overflow: hidden;
 }
